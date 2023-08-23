@@ -20,7 +20,7 @@ export default (env: BuildEnv) => {
   const paths: BuildPaths = {
     html: path.resolve(__dirname, "public", "index.html"),
     output: path.resolve(__dirname, "dist"),
-    entry: path.resolve(__dirname, "src", "index.ts"),
+    entry: path.resolve(__dirname, "src", "index.tsx"),
   }
 
   //передаваемые опции 
