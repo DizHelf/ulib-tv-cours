@@ -19,10 +19,10 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
       filename: "[name].[contenthash].js",
       clean: true,
     },
-    devtool: isDev && 'inline-source-map',
-    devServer: isDev && buildDevServer(options),
+    devtool: isDev ? 'inline-source-map' : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined,
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
     plugins: buildPlugins(options),
