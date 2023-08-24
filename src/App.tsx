@@ -6,15 +6,16 @@ import MainPageAsync from './pages/MainPage/MainPage.async';
 import { Link } from 'react-router-dom';
 import './styles/index.scss'
 import { useTheme } from './theme/useTheme';
+import { classNames } from './helpers/classNames/classNames';
 
 
 
 const App = () => {
   
-  const {theme, toggleTheme} = useTheme()
+  const {theme, toggleTheme} = useTheme();
 
   return(
-    <div className={`app ${theme}`}>
+    <div className={classNames("app", {}, [theme])}>
       <Link to="/">MainPage</Link>
       <Link to="/about">AboutPage</Link>
       <button onClick={toggleTheme}>setTheme</button>
