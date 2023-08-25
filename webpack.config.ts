@@ -21,6 +21,7 @@ export default (env: BuildEnv) => {
     html: path.resolve(__dirname, "public", "index.html"),
     output: path.resolve(__dirname, "dist"),
     entry: path.resolve(__dirname, "src", "index.tsx"),
+    src: path.resolve(__dirname, "src")
   }
 
   //передаваемые опции 
