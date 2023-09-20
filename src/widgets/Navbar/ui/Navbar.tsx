@@ -5,17 +5,17 @@ import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 
 interface Navbar {
   className?: string,
-};
+}
 
 export const Navbar = ( { className }: Navbar ) => {
 
-  return(
-    <div className={classNames(cls.Navbar, {}, [className])}>
-      <div className={cls.links}>
-        <AppLink theme={AppLinkTheme.SECONDARY} to={RouterPath.main}>Main</AppLink>
-        <AppLink theme={AppLinkTheme.SECONDARY} to={RouterPath.about}>About</AppLink>
-      </div>
+    return(
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <div className={cls.links}>
+                <AppLink theme={AppLinkTheme.SECONDARY} to={RouterPath.main}>Main</AppLink>
+                <AppLink theme={AppLinkTheme.SECONDARY} to={RouterPath.about}>About</AppLink>
+            </div>
       
-    </div>
-  );
+        </div>
+    );
 };

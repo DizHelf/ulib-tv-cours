@@ -9,21 +9,21 @@ import { Button } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
   className?: string 
-};
+}
 
 export const ThemeSwitcher:FC<ThemeSwitcherProps> = ( props ) => {
 
-  const {children, className} = props;
+    const {children, className} = props;
 
-  const {theme, toggleTheme} = useTheme();
+    const {theme, toggleTheme} = useTheme();
 
-  const setTheme = () => {
-    toggleTheme()
-  }
+    const setTheme = () => {
+        toggleTheme()
+    }
 
-  return(
-    <Button onClick={setTheme} className={classNames(cls.ThemeSwitcher, {}, [className])}>
-      {theme === Theme.DARK ? <DarkTheme/> : <LightTheme/>}
-    </Button>
-  );
+    return(
+        <Button onClick={setTheme} className={classNames(cls.ThemeSwitcher, {}, [className])}>
+            {theme === Theme.DARK ? <DarkTheme/> : <LightTheme/>}
+        </Button>
+    );
 };

@@ -6,24 +6,24 @@ import { LangSwitcher } from 'shared/ui/LangSwitcher';
 
 interface SidebarProps {
   className?: string
-};
+}
 
 export const Sidebar: FC<SidebarProps> = ( { className } ) => {
 
-  const [collapsed, setCollapsed] = useState(false)
+    const [collapsed, setCollapsed] = useState(false)
 
-  const toggleSidebar = () => {
-    setCollapsed((prev) => !prev)
-  }
+    const toggleSidebar = () => {
+        setCollapsed((prev) => !prev)
+    }
 
-  return(
-    <div className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
-      <button onClick={toggleSidebar}>toggle</button>
+    return(
+        <div className={classNames(cls.Sidebar, {[cls.collapsed]: collapsed}, [className])}>
+            <button onClick={toggleSidebar}>toggle</button>
 
-      <div className={cls.switchers}>
-        <ThemeSwitcher/>
-        <LangSwitcher className={cls.lang}/>
-      </div>
-    </div>
-  );
+            <div className={cls.switchers}>
+                <ThemeSwitcher/>
+                <LangSwitcher className={cls.lang}/>
+            </div>
+        </div>
+    );
 };

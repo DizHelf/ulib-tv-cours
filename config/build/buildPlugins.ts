@@ -6,20 +6,20 @@ import { BuildOptions } from './types/config';
 
 export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
 
-  const {paths, isDev} = options
+    const {paths, isDev} = options
 
-  return [
-    new HtmlWebpackPlugin({
-      template: paths.html,
-    }),
-    new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash].css",
-      chunkFilename: "css/[name].[contenthash].css"
-    }),
-    new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev)
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-  ]
+    return [
+        new HtmlWebpackPlugin({
+            template: paths.html,
+        }),
+        new webpack.ProgressPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash].css',
+            chunkFilename: 'css/[name].[contenthash].css'
+        }),
+        new webpack.DefinePlugin({
+            __IS_DEV__: JSON.stringify(isDev)
+        }),
+        new webpack.HotModuleReplacementPlugin(),
+    ]
 }
