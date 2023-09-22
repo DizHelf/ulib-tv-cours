@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "ThemeSwitcher.module.scss"
+    ],
+    "names": [],
+    "file": "ThemeSwitcher.module.css"
+}
